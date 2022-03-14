@@ -117,4 +117,550 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnConnect.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, -1</value>
+  </data>
+  <data name="btnConnect.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 23</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnConnect.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnConnect.Text" xml:space="preserve">
+    <value>Подключиться</value>
+  </data>
+  <data name="&gt;&gt;btnConnect.Name" xml:space="preserve">
+    <value>btnConnect</value>
+  </data>
+  <data name="&gt;&gt;btnConnect.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnConnect.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btnConnect.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelStatus.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>142, 4</value>
+  </data>
+  <data name="labelStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 13</value>
+  </data>
+  <data name="labelStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="labelStatus.Text" xml:space="preserve">
+    <value>Статус: </value>
+  </data>
+  <data name="&gt;&gt;labelStatus.Name" xml:space="preserve">
+    <value>labelStatus</value>
+  </data>
+  <data name="&gt;&gt;labelStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelStatus.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;labelStatus.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tabIncrease.Name" xml:space="preserve">
+    <value>tabIncrease</value>
+  </data>
+  <data name="&gt;&gt;tabIncrease.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabIncrease.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabIncrease.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tabAverage.Name" xml:space="preserve">
+    <value>tabAverage</value>
+  </data>
+  <data name="&gt;&gt;tabAverage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabAverage.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabAverage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tabGetInfoCountries.Name" xml:space="preserve">
+    <value>tabGetInfoCountries</value>
+  </data>
+  <data name="&gt;&gt;tabGetInfoCountries.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabGetInfoCountries.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabGetInfoCountries.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tabGetInfoEthnical.Name" xml:space="preserve">
+    <value>tabGetInfoEthnical</value>
+  </data>
+  <data name="&gt;&gt;tabGetInfoEthnical.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabGetInfoEthnical.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabGetInfoEthnical.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tabAddLangInfo.Name" xml:space="preserve">
+    <value>tabAddLangInfo</value>
+  </data>
+  <data name="&gt;&gt;tabAddLangInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabAddLangInfo.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabAddLangInfo.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tabControlMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 61</value>
+  </data>
+  <data name="tabControlMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>671, 305</value>
+  </data>
+  <data name="tabControlMain.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tabControlMain.Name" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabControlMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControlMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControlMain.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;increaseResultTestBox.Name" xml:space="preserve">
+    <value>increaseResultTestBox</value>
+  </data>
+  <data name="&gt;&gt;increaseResultTestBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;increaseResultTestBox.Parent" xml:space="preserve">
+    <value>tabIncrease</value>
+  </data>
+  <data name="&gt;&gt;increaseResultTestBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;executeIncreaseQuery.Name" xml:space="preserve">
+    <value>executeIncreaseQuery</value>
+  </data>
+  <data name="&gt;&gt;executeIncreaseQuery.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;executeIncreaseQuery.Parent" xml:space="preserve">
+    <value>tabIncrease</value>
+  </data>
+  <data name="&gt;&gt;executeIncreaseQuery.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabIncrease.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tabIncrease.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabIncrease.Size" type="System.Drawing.Size, System.Drawing">
+    <value>663, 279</value>
+  </data>
+  <data name="tabIncrease.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabIncrease.Text" xml:space="preserve">
+    <value>Увеличение этнического состава</value>
+  </data>
+  <data name="&gt;&gt;tabIncrease.Name" xml:space="preserve">
+    <value>tabIncrease</value>
+  </data>
+  <data name="&gt;&gt;tabIncrease.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabIncrease.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabIncrease.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="increaseResultTestBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 52</value>
+  </data>
+  <data name="increaseResultTestBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>651, 20</value>
+  </data>
+  <data name="increaseResultTestBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;increaseResultTestBox.Name" xml:space="preserve">
+    <value>increaseResultTestBox</value>
+  </data>
+  <data name="&gt;&gt;increaseResultTestBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;increaseResultTestBox.Parent" xml:space="preserve">
+    <value>tabIncrease</value>
+  </data>
+  <data name="&gt;&gt;increaseResultTestBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="executeIncreaseQuery.Location" type="System.Drawing.Point, System.Drawing">
+    <value>526, 78</value>
+  </data>
+  <data name="executeIncreaseQuery.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 27</value>
+  </data>
+  <data name="executeIncreaseQuery.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="executeIncreaseQuery.Text" xml:space="preserve">
+    <value>Выполнить запрос</value>
+  </data>
+  <data name="&gt;&gt;executeIncreaseQuery.Name" xml:space="preserve">
+    <value>executeIncreaseQuery</value>
+  </data>
+  <data name="&gt;&gt;executeIncreaseQuery.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;executeIncreaseQuery.Parent" xml:space="preserve">
+    <value>tabIncrease</value>
+  </data>
+  <data name="&gt;&gt;executeIncreaseQuery.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;executeAverageQuery.Name" xml:space="preserve">
+    <value>executeAverageQuery</value>
+  </data>
+  <data name="&gt;&gt;executeAverageQuery.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;executeAverageQuery.Parent" xml:space="preserve">
+    <value>tabAverage</value>
+  </data>
+  <data name="&gt;&gt;executeAverageQuery.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;avgTextBox.Name" xml:space="preserve">
+    <value>avgTextBox</value>
+  </data>
+  <data name="&gt;&gt;avgTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;avgTextBox.Parent" xml:space="preserve">
+    <value>tabAverage</value>
+  </data>
+  <data name="&gt;&gt;avgTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>tabAverage</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabAverage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabAverage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabAverage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>663, 279</value>
+  </data>
+  <data name="tabAverage.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabAverage.Text" xml:space="preserve">
+    <value>Вывод средней численности</value>
+  </data>
+  <data name="&gt;&gt;tabAverage.Name" xml:space="preserve">
+    <value>tabAverage</value>
+  </data>
+  <data name="&gt;&gt;tabAverage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabAverage.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabAverage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="executeAverageQuery.Location" type="System.Drawing.Point, System.Drawing">
+    <value>540, 110</value>
+  </data>
+  <data name="executeAverageQuery.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 23</value>
+  </data>
+  <data name="executeAverageQuery.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="executeAverageQuery.Text" xml:space="preserve">
+    <value>Выполнить запрос</value>
+  </data>
+  <data name="&gt;&gt;executeAverageQuery.Name" xml:space="preserve">
+    <value>executeAverageQuery</value>
+  </data>
+  <data name="&gt;&gt;executeAverageQuery.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;executeAverageQuery.Parent" xml:space="preserve">
+    <value>tabAverage</value>
+  </data>
+  <data name="&gt;&gt;executeAverageQuery.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="avgTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 84</value>
+  </data>
+  <data name="avgTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>653, 20</value>
+  </data>
+  <data name="avgTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;avgTextBox.Name" xml:space="preserve">
+    <value>avgTextBox</value>
+  </data>
+  <data name="&gt;&gt;avgTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;avgTextBox.Parent" xml:space="preserve">
+    <value>tabAverage</value>
+  </data>
+  <data name="&gt;&gt;avgTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 68</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 13</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Средняя численность этнического состава</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>tabAverage</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;getCountriesInfo.Name" xml:space="preserve">
+    <value>getCountriesInfo</value>
+  </data>
+  <data name="&gt;&gt;getCountriesInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;getCountriesInfo.Parent" xml:space="preserve">
+    <value>tabGetInfoCountries</value>
+  </data>
+  <data name="&gt;&gt;getCountriesInfo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;countryInfoDataGrid.Name" xml:space="preserve">
+    <value>countryInfoDataGrid</value>
+  </data>
+  <data name="&gt;&gt;countryInfoDataGrid.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;countryInfoDataGrid.Parent" xml:space="preserve">
+    <value>tabGetInfoCountries</value>
+  </data>
+  <data name="&gt;&gt;countryInfoDataGrid.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabGetInfoCountries.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabGetInfoCountries.Size" type="System.Drawing.Size, System.Drawing">
+    <value>663, 279</value>
+  </data>
+  <data name="tabGetInfoCountries.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabGetInfoCountries.Text" xml:space="preserve">
+    <value>Проверка информации о странах</value>
+  </data>
+  <data name="&gt;&gt;tabGetInfoCountries.Name" xml:space="preserve">
+    <value>tabGetInfoCountries</value>
+  </data>
+  <data name="&gt;&gt;tabGetInfoCountries.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabGetInfoCountries.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabGetInfoCountries.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="getCountriesInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>539, 253</value>
+  </data>
+  <data name="getCountriesInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 23</value>
+  </data>
+  <data name="getCountriesInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="getCountriesInfo.Text" xml:space="preserve">
+    <value>Выполнить запрос</value>
+  </data>
+  <data name="&gt;&gt;getCountriesInfo.Name" xml:space="preserve">
+    <value>getCountriesInfo</value>
+  </data>
+  <data name="&gt;&gt;getCountriesInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;getCountriesInfo.Parent" xml:space="preserve">
+    <value>tabGetInfoCountries</value>
+  </data>
+  <data name="&gt;&gt;getCountriesInfo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="countryInfoDataGrid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="countryInfoDataGrid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>656, 246</value>
+  </data>
+  <data name="countryInfoDataGrid.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;countryInfoDataGrid.Name" xml:space="preserve">
+    <value>countryInfoDataGrid</value>
+  </data>
+  <data name="&gt;&gt;countryInfoDataGrid.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;countryInfoDataGrid.Parent" xml:space="preserve">
+    <value>tabGetInfoCountries</value>
+  </data>
+  <data name="&gt;&gt;countryInfoDataGrid.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabGetInfoEthnical.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabGetInfoEthnical.Size" type="System.Drawing.Size, System.Drawing">
+    <value>663, 279</value>
+  </data>
+  <data name="tabGetInfoEthnical.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tabGetInfoEthnical.Text" xml:space="preserve">
+    <value>Проверка информации об этническом составе</value>
+  </data>
+  <data name="&gt;&gt;tabGetInfoEthnical.Name" xml:space="preserve">
+    <value>tabGetInfoEthnical</value>
+  </data>
+  <data name="&gt;&gt;tabGetInfoEthnical.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabGetInfoEthnical.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabGetInfoEthnical.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tabAddLangInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabAddLangInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>663, 279</value>
+  </data>
+  <data name="tabAddLangInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tabAddLangInfo.Text" xml:space="preserve">
+    <value>Добавить информацию о новом языке</value>
+  </data>
+  <data name="&gt;&gt;tabAddLangInfo.Name" xml:space="preserve">
+    <value>tabAddLangInfo</value>
+  </data>
+  <data name="&gt;&gt;tabAddLangInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabAddLangInfo.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabAddLangInfo.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>668, 42</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>692, 375</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>База данных "Языки народов мира"</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Form1</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

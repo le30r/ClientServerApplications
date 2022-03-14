@@ -28,38 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnConnect = new System.Windows.Forms.Button();
             this.labelStatus = new System.Windows.Forms.Label();
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabIncrease = new System.Windows.Forms.TabPage();
+            this.increaseResultTestBox = new System.Windows.Forms.TextBox();
+            this.executeIncreaseQuery = new System.Windows.Forms.Button();
             this.tabAverage = new System.Windows.Forms.TabPage();
+            this.executeAverageQuery = new System.Windows.Forms.Button();
+            this.avgTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabGetInfoCountries = new System.Windows.Forms.TabPage();
+            this.getCountriesInfo = new System.Windows.Forms.Button();
+            this.countryInfoDataGrid = new System.Windows.Forms.DataGridView();
             this.tabGetInfoEthnical = new System.Windows.Forms.TabPage();
             this.tabAddLangInfo = new System.Windows.Forms.TabPage();
-            this.executeIncreaseQuery = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tabControlMain.SuspendLayout();
             this.tabIncrease.SuspendLayout();
+            this.tabAverage.SuspendLayout();
+            this.tabGetInfoCountries.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.countryInfoDataGrid)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnConnect
             // 
-            this.btnConnect.Location = new System.Drawing.Point(13, 13);
+            resources.ApplyResources(this.btnConnect, "btnConnect");
             this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(136, 23);
-            this.btnConnect.TabIndex = 0;
-            this.btnConnect.Text = "Подключиться";
             this.btnConnect.UseVisualStyleBackColor = true;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // labelStatus
             // 
-            this.labelStatus.AutoSize = true;
-            this.labelStatus.Location = new System.Drawing.Point(155, 18);
+            resources.ApplyResources(this.labelStatus, "labelStatus");
             this.labelStatus.Name = "labelStatus";
-            this.labelStatus.Size = new System.Drawing.Size(47, 13);
-            this.labelStatus.TabIndex = 1;
-            this.labelStatus.Text = "Статус: ";
             // 
             // tabControlMain
             // 
@@ -68,93 +72,118 @@
             this.tabControlMain.Controls.Add(this.tabGetInfoCountries);
             this.tabControlMain.Controls.Add(this.tabGetInfoEthnical);
             this.tabControlMain.Controls.Add(this.tabAddLangInfo);
-            this.tabControlMain.Location = new System.Drawing.Point(13, 61);
+            resources.ApplyResources(this.tabControlMain, "tabControlMain");
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
-            this.tabControlMain.Size = new System.Drawing.Size(452, 305);
-            this.tabControlMain.TabIndex = 2;
             // 
             // tabIncrease
             // 
-            this.tabIncrease.Controls.Add(this.textBox1);
+            this.tabIncrease.Controls.Add(this.increaseResultTestBox);
             this.tabIncrease.Controls.Add(this.executeIncreaseQuery);
-            this.tabIncrease.Location = new System.Drawing.Point(4, 22);
+            resources.ApplyResources(this.tabIncrease, "tabIncrease");
             this.tabIncrease.Name = "tabIncrease";
-            this.tabIncrease.Padding = new System.Windows.Forms.Padding(3);
-            this.tabIncrease.Size = new System.Drawing.Size(444, 279);
-            this.tabIncrease.TabIndex = 0;
-            this.tabIncrease.Text = "Увеличение этнического состава";
             this.tabIncrease.UseVisualStyleBackColor = true;
+            // 
+            // increaseResultTestBox
+            // 
+            resources.ApplyResources(this.increaseResultTestBox, "increaseResultTestBox");
+            this.increaseResultTestBox.Name = "increaseResultTestBox";
+            // 
+            // executeIncreaseQuery
+            // 
+            resources.ApplyResources(this.executeIncreaseQuery, "executeIncreaseQuery");
+            this.executeIncreaseQuery.Name = "executeIncreaseQuery";
+            this.executeIncreaseQuery.UseVisualStyleBackColor = true;
+            this.executeIncreaseQuery.Click += new System.EventHandler(this.executeIncreaseQuery_Click);
             // 
             // tabAverage
             // 
-            this.tabAverage.Location = new System.Drawing.Point(4, 22);
+            this.tabAverage.Controls.Add(this.executeAverageQuery);
+            this.tabAverage.Controls.Add(this.avgTextBox);
+            this.tabAverage.Controls.Add(this.label1);
+            resources.ApplyResources(this.tabAverage, "tabAverage");
             this.tabAverage.Name = "tabAverage";
-            this.tabAverage.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAverage.Size = new System.Drawing.Size(585, 279);
-            this.tabAverage.TabIndex = 1;
-            this.tabAverage.Text = "Вывод средней численности";
             this.tabAverage.UseVisualStyleBackColor = true;
+            // 
+            // executeAverageQuery
+            // 
+            resources.ApplyResources(this.executeAverageQuery, "executeAverageQuery");
+            this.executeAverageQuery.Name = "executeAverageQuery";
+            this.executeAverageQuery.UseVisualStyleBackColor = true;
+            this.executeAverageQuery.Click += new System.EventHandler(this.executeAverageQuery_Click);
+            // 
+            // avgTextBox
+            // 
+            resources.ApplyResources(this.avgTextBox, "avgTextBox");
+            this.avgTextBox.Name = "avgTextBox";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // tabGetInfoCountries
             // 
-            this.tabGetInfoCountries.Location = new System.Drawing.Point(4, 22);
+            this.tabGetInfoCountries.Controls.Add(this.getCountriesInfo);
+            this.tabGetInfoCountries.Controls.Add(this.countryInfoDataGrid);
+            resources.ApplyResources(this.tabGetInfoCountries, "tabGetInfoCountries");
             this.tabGetInfoCountries.Name = "tabGetInfoCountries";
-            this.tabGetInfoCountries.Size = new System.Drawing.Size(444, 279);
-            this.tabGetInfoCountries.TabIndex = 2;
-            this.tabGetInfoCountries.Text = "Проверка информации о странах";
             this.tabGetInfoCountries.UseVisualStyleBackColor = true;
+            // 
+            // getCountriesInfo
+            // 
+            resources.ApplyResources(this.getCountriesInfo, "getCountriesInfo");
+            this.getCountriesInfo.Name = "getCountriesInfo";
+            this.getCountriesInfo.UseVisualStyleBackColor = true;
+            this.getCountriesInfo.Click += new System.EventHandler(this.getCountriesInfo_Click);
+            // 
+            // countryInfoDataGrid
+            // 
+            this.countryInfoDataGrid.AllowUserToAddRows = false;
+            this.countryInfoDataGrid.AllowUserToDeleteRows = false;
+            this.countryInfoDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.countryInfoDataGrid, "countryInfoDataGrid");
+            this.countryInfoDataGrid.Name = "countryInfoDataGrid";
+            this.countryInfoDataGrid.ReadOnly = true;
             // 
             // tabGetInfoEthnical
             // 
-            this.tabGetInfoEthnical.Location = new System.Drawing.Point(4, 22);
+            resources.ApplyResources(this.tabGetInfoEthnical, "tabGetInfoEthnical");
             this.tabGetInfoEthnical.Name = "tabGetInfoEthnical";
-            this.tabGetInfoEthnical.Size = new System.Drawing.Size(444, 279);
-            this.tabGetInfoEthnical.TabIndex = 3;
-            this.tabGetInfoEthnical.Text = "Проверка информации об этническом составе";
             this.tabGetInfoEthnical.UseVisualStyleBackColor = true;
             // 
             // tabAddLangInfo
             // 
-            this.tabAddLangInfo.Location = new System.Drawing.Point(4, 22);
+            resources.ApplyResources(this.tabAddLangInfo, "tabAddLangInfo");
             this.tabAddLangInfo.Name = "tabAddLangInfo";
-            this.tabAddLangInfo.Size = new System.Drawing.Size(585, 279);
-            this.tabAddLangInfo.TabIndex = 4;
-            this.tabAddLangInfo.Text = "Добавить информацию о новом языке";
             this.tabAddLangInfo.UseVisualStyleBackColor = true;
             // 
-            // executeIncreaseQuery
+            // panel1
             // 
-            this.executeIncreaseQuery.Location = new System.Drawing.Point(306, 89);
-            this.executeIncreaseQuery.Name = "executeIncreaseQuery";
-            this.executeIncreaseQuery.Size = new System.Drawing.Size(131, 27);
-            this.executeIncreaseQuery.TabIndex = 0;
-            this.executeIncreaseQuery.Text = "Выполнить запрос";
-            this.executeIncreaseQuery.UseVisualStyleBackColor = true;
-            this.executeIncreaseQuery.Click += new System.EventHandler(this.executeIncreaseQuery_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(6, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(431, 20);
-            this.textBox1.TabIndex = 1;
+            this.panel1.Controls.Add(this.btnConnect);
+            this.panel1.Controls.Add(this.labelStatus);
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(468, 378);
             this.Controls.Add(this.tabControlMain);
-            this.Controls.Add(this.labelStatus);
-            this.Controls.Add(this.btnConnect);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "База данных \"Языки народов мира\"";
             this.tabControlMain.ResumeLayout(false);
             this.tabIncrease.ResumeLayout(false);
             this.tabIncrease.PerformLayout();
+            this.tabAverage.ResumeLayout(false);
+            this.tabAverage.PerformLayout();
+            this.tabGetInfoCountries.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.countryInfoDataGrid)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -169,7 +198,13 @@
         private System.Windows.Forms.TabPage tabGetInfoCountries;
         private System.Windows.Forms.TabPage tabGetInfoEthnical;
         private System.Windows.Forms.TabPage tabAddLangInfo;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox increaseResultTestBox;
+        private System.Windows.Forms.Button executeAverageQuery;
+        private System.Windows.Forms.TextBox avgTextBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView countryInfoDataGrid;
+        private System.Windows.Forms.Button getCountriesInfo;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
