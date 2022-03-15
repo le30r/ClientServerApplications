@@ -58,7 +58,8 @@
             this.Controls.Add(this.btnRun);
             this.Controls.Add(this.listBox1);
             this.Name = "Form1";
-            this.Text = "Работа с конфигурационным файлом";
+            this.Text = "Подключение к БД";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.ResumeLayout(false);
 
         }

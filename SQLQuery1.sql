@@ -24,9 +24,26 @@ WHERE —трана IN (select —трана
 				HAVING COUNT(язык) >= 2)
 COMMIT TRAN
 ROLLBACK TRAN
-SELECT * FROM Ётнический—остав
+
+
+SELECT —трана, язык, √од, „исленность
+FROM Ётнический—остав JOIN —траны ON —траны. од = —трана JOIN языки ON языки. од = язык
+WHERE языки.Ќазвание = 'украинский' AND —траны.Ќазвание = '–осси€'
+
+INSERT INTO языки ( од, Ќазвание, [языкова€ группа], [¬ид знаковой системы])
+VALUES (@@IDENTITY + 1, 'май€', 'май€йские', 'письмо май€')
 
 
 
 
+CREATE PROCEDURE addNewCountry (@name nchar(25), @group nchar(25), @sign_system nchar(25)) 
+AS
+BEGIN 
+DECLARE @last int
+SET @last = (SELECT MAX( од)
+			FROM языки) + 1
+
+INSERT INTO языки 
+VALUES (@last, @name, @group, @sign_system)
+END
 

@@ -23,6 +23,17 @@ namespace lab2_1
         public static readonly string SELECT_COUNTRIES =
             "SELECT *" +
             "FROM Страны";
+
+        public static readonly string SELECT_ETHICAL =
+           "SELECT Страны.Название AS 'Название страны', Языки.Название AS 'Название языка', Год, Численность " + 
+            "FROM ЭтническийСостав JOIN Страны ON Страны.Код = Страна JOIN Языки ON Языки.Код = Язык " + 
+            "WHERE Языки.Название = @language AND Страны.Название = @country";
+
+
+        public static readonly string ADD_NEW_LANGUAGE =
+            "EXEC addNewCountry @name, @group, @sign_system";
+
+        public static readonly string CHECK_ADDED_LANGUAGE = "SELECT * FROM Языки WHERE Название = @name";
     }
 
 

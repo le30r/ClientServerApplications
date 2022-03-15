@@ -43,13 +43,31 @@
             this.getCountriesInfo = new System.Windows.Forms.Button();
             this.countryInfoDataGrid = new System.Windows.Forms.DataGridView();
             this.tabGetInfoEthnical = new System.Windows.Forms.TabPage();
+            this.ethnicalGridView = new System.Windows.Forms.DataGridView();
+            this.executeEthical = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.languageBox = new System.Windows.Forms.TextBox();
+            this.countryBox = new System.Windows.Forms.TextBox();
             this.tabAddLangInfo = new System.Windows.Forms.TabPage();
+            this.addResultGridView = new System.Windows.Forms.DataGridView();
+            this.addLanguageButton = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.signSystemBox = new System.Windows.Forms.TextBox();
+            this.groupBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.nameBox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControlMain.SuspendLayout();
             this.tabIncrease.SuspendLayout();
             this.tabAverage.SuspendLayout();
             this.tabGetInfoCountries.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.countryInfoDataGrid)).BeginInit();
+            this.tabGetInfoEthnical.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ethnicalGridView)).BeginInit();
+            this.tabAddLangInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addResultGridView)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -148,15 +166,112 @@
             // 
             // tabGetInfoEthnical
             // 
+            this.tabGetInfoEthnical.Controls.Add(this.ethnicalGridView);
+            this.tabGetInfoEthnical.Controls.Add(this.executeEthical);
+            this.tabGetInfoEthnical.Controls.Add(this.label3);
+            this.tabGetInfoEthnical.Controls.Add(this.label2);
+            this.tabGetInfoEthnical.Controls.Add(this.languageBox);
+            this.tabGetInfoEthnical.Controls.Add(this.countryBox);
             resources.ApplyResources(this.tabGetInfoEthnical, "tabGetInfoEthnical");
             this.tabGetInfoEthnical.Name = "tabGetInfoEthnical";
             this.tabGetInfoEthnical.UseVisualStyleBackColor = true;
             // 
+            // ethnicalGridView
+            // 
+            this.ethnicalGridView.AllowUserToAddRows = false;
+            this.ethnicalGridView.AllowUserToDeleteRows = false;
+            this.ethnicalGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.ethnicalGridView, "ethnicalGridView");
+            this.ethnicalGridView.Name = "ethnicalGridView";
+            this.ethnicalGridView.ReadOnly = true;
+            // 
+            // executeEthical
+            // 
+            resources.ApplyResources(this.executeEthical, "executeEthical");
+            this.executeEthical.Name = "executeEthical";
+            this.executeEthical.UseVisualStyleBackColor = true;
+            this.executeEthical.Click += new System.EventHandler(this.executeEthical_Click);
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // languageBox
+            // 
+            resources.ApplyResources(this.languageBox, "languageBox");
+            this.languageBox.Name = "languageBox";
+            this.languageBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.languageBox_KeyDown);
+            // 
+            // countryBox
+            // 
+            resources.ApplyResources(this.countryBox, "countryBox");
+            this.countryBox.Name = "countryBox";
+            // 
             // tabAddLangInfo
             // 
+            this.tabAddLangInfo.Controls.Add(this.addResultGridView);
+            this.tabAddLangInfo.Controls.Add(this.addLanguageButton);
+            this.tabAddLangInfo.Controls.Add(this.label6);
+            this.tabAddLangInfo.Controls.Add(this.signSystemBox);
+            this.tabAddLangInfo.Controls.Add(this.groupBox);
+            this.tabAddLangInfo.Controls.Add(this.label5);
+            this.tabAddLangInfo.Controls.Add(this.label4);
+            this.tabAddLangInfo.Controls.Add(this.nameBox);
             resources.ApplyResources(this.tabAddLangInfo, "tabAddLangInfo");
             this.tabAddLangInfo.Name = "tabAddLangInfo";
             this.tabAddLangInfo.UseVisualStyleBackColor = true;
+            // 
+            // addResultGridView
+            // 
+            this.addResultGridView.AllowUserToAddRows = false;
+            this.addResultGridView.AllowUserToDeleteRows = false;
+            this.addResultGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.addResultGridView, "addResultGridView");
+            this.addResultGridView.Name = "addResultGridView";
+            this.addResultGridView.ReadOnly = true;
+            // 
+            // addLanguageButton
+            // 
+            resources.ApplyResources(this.addLanguageButton, "addLanguageButton");
+            this.addLanguageButton.Name = "addLanguageButton";
+            this.addLanguageButton.UseVisualStyleBackColor = true;
+            this.addLanguageButton.Click += new System.EventHandler(this.addLanguageButton_Click);
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // signSystemBox
+            // 
+            resources.ApplyResources(this.signSystemBox, "signSystemBox");
+            this.signSystemBox.Name = "signSystemBox";
+            // 
+            // groupBox
+            // 
+            resources.ApplyResources(this.groupBox, "groupBox");
+            this.groupBox.Name = "groupBox";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // nameBox
+            // 
+            resources.ApplyResources(this.nameBox, "nameBox");
+            this.nameBox.Name = "nameBox";
             // 
             // panel1
             // 
@@ -174,6 +289,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.tabControlMain.ResumeLayout(false);
             this.tabIncrease.ResumeLayout(false);
             this.tabIncrease.PerformLayout();
@@ -181,6 +297,12 @@
             this.tabAverage.PerformLayout();
             this.tabGetInfoCountries.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.countryInfoDataGrid)).EndInit();
+            this.tabGetInfoEthnical.ResumeLayout(false);
+            this.tabGetInfoEthnical.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ethnicalGridView)).EndInit();
+            this.tabAddLangInfo.ResumeLayout(false);
+            this.tabAddLangInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addResultGridView)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -205,6 +327,20 @@
         private System.Windows.Forms.DataGridView countryInfoDataGrid;
         private System.Windows.Forms.Button getCountriesInfo;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView ethnicalGridView;
+        private System.Windows.Forms.Button executeEthical;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox languageBox;
+        private System.Windows.Forms.TextBox countryBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox nameBox;
+        private System.Windows.Forms.Button addLanguageButton;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox signSystemBox;
+        private System.Windows.Forms.TextBox groupBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView addResultGridView;
     }
 }
 
