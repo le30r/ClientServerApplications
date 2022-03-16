@@ -47,3 +47,26 @@ INSERT INTO Языки
 VALUES (@last, @name, @group, @sign_system)
 END
 
+
+
+ALTER PROCEDURE ReducePopulation
+AS 
+BEGIN
+UPDATE Страны
+SET [Количество жителей] = [Количество жителей] * 0.97
+RETURN @@ROWCOUNT
+END
+
+SELECT *
+FROM Страны
+
+
+CREATE PROCEDURE AddCountry (@name nchar(25), @continent nchar(25), @capital nchar(25), @number nchar(25))
+AS
+BEGIN
+DECLARE @id int
+SET @id = (SELECT MAX(Код)
+			FROM Страны) + 1
+INSERT INTO Страны
+VALUES (@id, @name, @continent, @capital, @number)
+END

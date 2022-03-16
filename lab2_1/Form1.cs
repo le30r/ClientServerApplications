@@ -14,13 +14,13 @@ namespace lab2_1
     public partial class Form1 : Form
     {
         SqlConnection conn = new SqlConnection();
-        /* string connstring = "Data Source=ws210-p;" +
+        string connstring = "Data Source=ws210-p;" +
                                      "Initial Catalog=Языки народов мира;" +
                                      "User ID=sa;" +
                                      "Password=evmsql";
-        */
+        
 
-        string connstring = "Data Source=DESKTOP-8ER83ML\\SQLEXPRESS;Initial Catalog=Языки народов мира;Integrated Security=True";
+      //  string connstring = "Data Source=DESKTOP-8ER83ML\\SQLEXPRESS;Initial Catalog=Языки народов мира;Integrated Security=True";
 
         string NO_CONNECTION_ERROR = "Для выполнения запроса необходимо подключиться к базе данных";
         string NOT_FOUND_ERROR = "Запрос не вернул результатов";
