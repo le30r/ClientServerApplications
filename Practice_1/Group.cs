@@ -10,8 +10,8 @@ namespace Practice_1
     {
         private int _id;
 
-        public List<Student> Students = new List<Student>();
-
+        public SortedSet<Student> Students = new SortedSet<Student>();
+        
         public int ID
         {
             get
@@ -38,7 +38,7 @@ namespace Practice_1
         {
             Students.Add(student);
         }
-
+            
         public void RemoveStudent(Student student)
         {
             Students.Remove(student);
@@ -55,6 +55,8 @@ namespace Practice_1
             }
             return null;
         }
+
+        
 
         public void GetInfo()
         {

@@ -20,6 +20,12 @@ namespace Practice_1
 
             _945.GetInfo();
 
+            Console.WriteLine("\n");
+            _945.RemoveStudent(student);
+            _945.GetInfo();
+            Console.WriteLine("\n");
+
+            Console.WriteLine(_945.GetStudent(0));
 
             Console.ReadKey();
         }

@@ -7,9 +7,8 @@ using System.Text.RegularExpressions;
 
 namespace Practice_1
 {
-    class Student
+    class Student : IComparable 
     {
-        private string numberPattern = @"^7\\d{10}$";
 
         private static int _currentID = 0;
         
@@ -110,6 +109,7 @@ namespace Practice_1
             _id = _currentID++;
             this.Name = Name;
             this.SecondName = SecondName;
+            this.Surname = Surname;
             this.Birthday = Birthday;
             this.Address = Address;
             this.PhoneNumber = PhoneNumber;
@@ -128,12 +128,20 @@ namespace Practice_1
 
         public override string ToString()
         {
-            return "{ID " + ID + "; Name: " + Name + "; Second name: " + SecondName + "; Surname: " + Surname + "; Date of birthday " + Birthday.Date.ToShortDateString() + "; Address " + Address + "; Phone Number " + PhoneNumber + " }";
+            return "{ID " + ID + " \nSurname: " +
+                Surname + " \nName: " + Name + "; \nSecond name: " + SecondName +  " \nDate of birthday: " + Birthday.Date.ToShortDateString() +
+                " \nAddress: " + Address + 
+                " \nPhone Number: " + PhoneNumber + " }";
         }
 
         public static bool StringIsValid(string str)
         {
             return !string.IsNullOrEmpty(str);
+        }
+
+        public int CompareTo(object obj)
+        {
+            return Surname.CompareTo(((Student)obj).Surname);
         }
     }
 }
