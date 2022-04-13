@@ -15,14 +15,16 @@ namespace lab3_1
     {
 
         SqlConnection conn = new SqlConnection();
-        string connstring = "Data Source=ws210-p;" +
+        string connRSREU = "Data Source=ws210-p;" +
                                      "Initial Catalog=Языки народов мира;" +
                                      "User ID=sa;" +
                                      "Password=evmsql";
 
-        // string connstring = "Data Source=DESKTOP-8ER83ML\\SQLEXPRESS;Initial Catalog=Языки народов мира;Integrated Security=True";
+        string connHome = "Data Source=DESKTOP-8ER83ML\\SQLEXPRESS;Initial Catalog=Языки народов мира;Integrated Security=True";
         SqlCommand reduceCmd;
         SqlCommand addNewCountryCmd;
+        SqlCommand deleteEthicalCmd;
+        SqlCommand deleteLangCmd;
 
         string NO_CONNECTION_ERROR = "Для выполнения запроса необходимо подключиться к базе данных";
         string NOT_FOUND_ERROR = "Запрос не вернул результатов";
@@ -32,7 +34,8 @@ namespace lab3_1
         public Form1()
         {
             InitializeComponent();
-            conn.ConnectionString = connstring;
+            conn.ConnectionString = null;
+            radioHome_CheckedChanged(this, new EventArgs());
             createNonQueries();
 
         }
@@ -46,6 +49,14 @@ namespace lab3_1
             addNewCountryCmd = conn.CreateCommand();
             addNewCountryCmd.CommandType = CommandType.StoredProcedure;
             addNewCountryCmd.CommandText = SQL.ADD_COUNTRY;
+
+            deleteEthicalCmd = conn.CreateCommand();
+            deleteEthicalCmd.CommandType = CommandType.StoredProcedure;
+            deleteEthicalCmd.CommandText = "DeleteEthnical";
+
+            deleteLangCmd = conn.CreateCommand();
+            deleteLangCmd.CommandType = CommandType.StoredProcedure;
+            deleteLangCmd.CommandText = "DeleteLanguage";
         }
 
         private void btnRun_Click(object sender, EventArgs e)
@@ -103,17 +114,79 @@ namespace lab3_1
         {
             if (conn.State == ConnectionState.Open)
             {
+                addNewCountryCmd.Parameters.Clear();
                 addNewCountryCmd.Parameters.AddWithValue("@name", nameTextBox.Text);
                 addNewCountryCmd.Parameters.AddWithValue("@continent", continentTextBox.Text);
                 addNewCountryCmd.Parameters.AddWithValue("@capital", capitalTextBox.Text);
                 addNewCountryCmd.Parameters.AddWithValue("@number", numberTextBox.Text);
 
                 addNewCountryCmd.ExecuteNonQuery();
+
+                SqlCommand verifyCmd = conn.CreateCommand();
+                verifyCmd.CommandText = SQL.CHECK_ADDED_COUNTRY;
+                verifyCmd.Parameters.AddWithValue("@name", nameTextBox.Text.ToLower().ToString());
+
+                DataTable dataTable = new DataTable();
+                dataTable.Load(verifyCmd.ExecuteReader());
+                countryAddResultDataGrid.DataSource = dataTable;
             }
             else
             {
                 MessageBox.Show(this, NO_CONNECTION_ERROR, ERROR);
             }
+            
+        }
+
+        private void radioHome_CheckedChanged(object sender, EventArgs e)
+        {
+            if (conn.State != ConnectionState.Open)
+                conn.ConnectionString = connHome;
+        }
+
+        private void radioRsreu_CheckedChanged(object sender, EventArgs e)
+        {
+            if (conn.State != ConnectionState.Open)
+                conn.ConnectionString = connRSREU;
+        }
+
+        private void btnDeleteEthnical_Click(object sender, EventArgs e)
+        {
+
+            if (conn.State == ConnectionState.Open)
+            {
+                deleteEthicalCmd.Parameters.Clear();
+                deleteEthicalCmd.Parameters.AddWithValue("@country", nameTextBox.Text);
+                deleteEthicalCmd.Parameters.AddWithValue("@lang", nameTextBox.Text);
+
+                int res = deleteEthicalCmd.ExecuteNonQuery();
+
+                deleteEthnicalResult.Text = "Удалено " + res + " записей"; 
+            }
+            else
+            {
+                MessageBox.Show(this, NO_CONNECTION_ERROR, ERROR);
+            }
+
+
+        }
+
+        private void delLangButton_Click(object sender, EventArgs e)
+        {
+            if (conn.State == ConnectionState.Open)
+            {
+                deleteLangCmd.Parameters.Clear();
+                deleteLangCmd.Parameters.AddWithValue("@name", nameTextBox.Text);
+                
+
+                int res = deleteLangCmd.ExecuteNonQuery();
+
+                deleteResultBox.Text = "Удалено " + res + " записей";
+            }
+            else
+            {
+                MessageBox.Show(this, NO_CONNECTION_ERROR, ERROR);
+            }
+
         }
     }
 }

@@ -10,5 +10,8 @@ namespace lab3_1
     {
         //public static readonly string ADD_COUNTRY = "EXEC AddCountry @name, @continent, @capital, @number";
         public static readonly string ADD_COUNTRY = "AddCountry";
+        public static readonly string CHECK_ADDED_COUNTRY = "SELECT * " +
+                                                            "FROM Страны " +
+                                                            "WHERE Название = @name ";
     }
 }

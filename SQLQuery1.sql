@@ -70,3 +70,47 @@ SET @id = (SELECT MAX(Код)
 INSERT INTO Страны
 VALUES (@id, @name, @continent, @capital, @number)
 END
+
+ALTER PROCEDURE DeleteEthnical (@country nchar(25), @lang nchar(25))
+AS
+BEGIN
+DECLARE @country_id int, @lang_id int
+SELECT @country_id = Код
+FROM Страны
+WHERE Название = @country
+SELECT @lang_id = Код
+FROM Языки
+WHERE Название = @lang
+
+DELETE FROM ЭтническийСостав
+WHERE Страна = @country_id AND Язык = @lang_id
+END
+
+select * from ЭтническийСостав
+
+SELECT * FROM Страны
+SELECT * FROM Языки
+
+ExEC DeleteEthnical 'Канада', 'Французский'
+
+ALTER PROCEDURE DeleteLanguage (@name nchar(25))
+AS
+BEGIN
+DECLARE @lang_code int
+SELECT @lang_code = Код
+FROM Языки
+WHERE Название = @name
+IF EXISTS (SELECT * FROM ЭтническийСостав
+			WHERE Язык = @lang_code)
+RETURN 1
+ELSE 
+	DELETE FROM Языки
+	WHERE Название = @name
+	IF @@ROWCOUNT != 0 RETURN 0
+	ELSE RETURN 2
+END
+
+
+DECLARE @ret int 
+EXEC @ret = DeleteLanguage 'Русский'
+PRINT @ret

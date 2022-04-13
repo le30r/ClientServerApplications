@@ -32,26 +32,40 @@
             this.labelStatus = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.reduceButton = new System.Windows.Forms.Button();
             this.reduceResultBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.continentTextBox = new System.Windows.Forms.TextBox();
-            this.capitalTextBox = new System.Windows.Forms.TextBox();
-            this.numberTextBox = new System.Windows.Forms.TextBox();
-            this.addCountryButton = new System.Windows.Forms.Button();
+            this.reduceButton = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.countryAddResultDataGrid = new System.Windows.Forms.DataGridView();
+            this.addCountryButton = new System.Windows.Forms.Button();
+            this.numberTextBox = new System.Windows.Forms.TextBox();
+            this.capitalTextBox = new System.Windows.Forms.TextBox();
+            this.continentTextBox = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.radioHome = new System.Windows.Forms.RadioButton();
+            this.radioRsreu = new System.Windows.Forms.RadioButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.countryName = new System.Windows.Forms.Label();
+            this.language = new System.Windows.Forms.Label();
+            this.btnDeleteEthnical = new System.Windows.Forms.Button();
+            this.deleteEthnicalResult = new System.Windows.Forms.TextBox();
+            this.delLangButton = new System.Windows.Forms.Button();
+            this.delLangTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.deleteResultBox = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.countryAddResultDataGrid)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnConnect
@@ -93,10 +107,28 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(544, 271);
+            this.tabPage1.Size = new System.Drawing.Size(544, 317);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Уменьшить число жителей";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // reduceResultBox
+            // 
+            this.reduceResultBox.Location = new System.Drawing.Point(6, 124);
+            this.reduceResultBox.Name = "reduceResultBox";
+            this.reduceResultBox.ReadOnly = true;
+            this.reduceResultBox.Size = new System.Drawing.Size(532, 20);
+            this.reduceResultBox.TabIndex = 1;
+            // 
+            // reduceButton
+            // 
+            this.reduceButton.Location = new System.Drawing.Point(409, 150);
+            this.reduceButton.Name = "reduceButton";
+            this.reduceButton.Size = new System.Drawing.Size(129, 23);
+            this.reduceButton.TabIndex = 0;
+            this.reduceButton.Text = "Выполнить запрос";
+            this.reduceButton.UseVisualStyleBackColor = true;
+            this.reduceButton.Click += new System.EventHandler(this.reduceButton_Click);
             // 
             // tabPage2
             // 
@@ -118,125 +150,6 @@
             this.tabPage2.Text = "Добавить новую страну";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(544, 271);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Удалить язык";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(544, 271);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Удалить этнический состав";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(544, 271);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Суммарная численность";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // reduceButton
-            // 
-            this.reduceButton.Location = new System.Drawing.Point(409, 150);
-            this.reduceButton.Name = "reduceButton";
-            this.reduceButton.Size = new System.Drawing.Size(129, 23);
-            this.reduceButton.TabIndex = 0;
-            this.reduceButton.Text = "Выполнить запрос";
-            this.reduceButton.UseVisualStyleBackColor = true;
-            this.reduceButton.Click += new System.EventHandler(this.reduceButton_Click);
-            // 
-            // reduceResultBox
-            // 
-            this.reduceResultBox.Location = new System.Drawing.Point(6, 124);
-            this.reduceResultBox.Name = "reduceResultBox";
-            this.reduceResultBox.ReadOnly = true;
-            this.reduceResultBox.Size = new System.Drawing.Size(532, 20);
-            this.reduceResultBox.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Название страны";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Материк";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(48, 88);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Столица";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(48, 119);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Численность населения";
-            // 
-            // nameTextBox
-            // 
-            this.nameTextBox.Location = new System.Drawing.Point(195, 32);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(155, 20);
-            this.nameTextBox.TabIndex = 4;
-            // 
-            // continentTextBox
-            // 
-            this.continentTextBox.Location = new System.Drawing.Point(195, 62);
-            this.continentTextBox.Name = "continentTextBox";
-            this.continentTextBox.Size = new System.Drawing.Size(155, 20);
-            this.continentTextBox.TabIndex = 5;
-            // 
-            // capitalTextBox
-            // 
-            this.capitalTextBox.Location = new System.Drawing.Point(195, 89);
-            this.capitalTextBox.Name = "capitalTextBox";
-            this.capitalTextBox.Size = new System.Drawing.Size(155, 20);
-            this.capitalTextBox.TabIndex = 6;
-            // 
-            // numberTextBox
-            // 
-            this.numberTextBox.Location = new System.Drawing.Point(195, 119);
-            this.numberTextBox.Name = "numberTextBox";
-            this.numberTextBox.Size = new System.Drawing.Size(155, 20);
-            this.numberTextBox.TabIndex = 7;
-            // 
-            // addCountryButton
-            // 
-            this.addCountryButton.Location = new System.Drawing.Point(275, 145);
-            this.addCountryButton.Name = "addCountryButton";
-            this.addCountryButton.Size = new System.Drawing.Size(75, 23);
-            this.addCountryButton.TabIndex = 8;
-            this.addCountryButton.Text = "Добавить";
-            this.addCountryButton.UseVisualStyleBackColor = true;
-            this.addCountryButton.Click += new System.EventHandler(this.addCountryButton_Click);
-            // 
             // countryAddResultDataGrid
             // 
             this.countryAddResultDataGrid.AllowUserToAddRows = false;
@@ -248,11 +161,232 @@
             this.countryAddResultDataGrid.Size = new System.Drawing.Size(541, 124);
             this.countryAddResultDataGrid.TabIndex = 9;
             // 
+            // addCountryButton
+            // 
+            this.addCountryButton.Location = new System.Drawing.Point(275, 145);
+            this.addCountryButton.Name = "addCountryButton";
+            this.addCountryButton.Size = new System.Drawing.Size(75, 23);
+            this.addCountryButton.TabIndex = 8;
+            this.addCountryButton.Text = "Добавить";
+            this.addCountryButton.UseVisualStyleBackColor = true;
+            this.addCountryButton.Click += new System.EventHandler(this.addCountryButton_Click);
+            // 
+            // numberTextBox
+            // 
+            this.numberTextBox.Location = new System.Drawing.Point(195, 119);
+            this.numberTextBox.Name = "numberTextBox";
+            this.numberTextBox.Size = new System.Drawing.Size(155, 20);
+            this.numberTextBox.TabIndex = 7;
+            // 
+            // capitalTextBox
+            // 
+            this.capitalTextBox.Location = new System.Drawing.Point(195, 89);
+            this.capitalTextBox.Name = "capitalTextBox";
+            this.capitalTextBox.Size = new System.Drawing.Size(155, 20);
+            this.capitalTextBox.TabIndex = 6;
+            // 
+            // continentTextBox
+            // 
+            this.continentTextBox.Location = new System.Drawing.Point(195, 62);
+            this.continentTextBox.Name = "continentTextBox";
+            this.continentTextBox.Size = new System.Drawing.Size(155, 20);
+            this.continentTextBox.TabIndex = 5;
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Location = new System.Drawing.Point(195, 32);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(155, 20);
+            this.nameTextBox.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(48, 119);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(131, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Численность населения";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(48, 88);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Столица";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(48, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Материк";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(48, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Название страны";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.deleteEthnicalResult);
+            this.tabPage4.Controls.Add(this.btnDeleteEthnical);
+            this.tabPage4.Controls.Add(this.language);
+            this.tabPage4.Controls.Add(this.countryName);
+            this.tabPage4.Controls.Add(this.textBox2);
+            this.tabPage4.Controls.Add(this.textBox1);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(544, 317);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Удалить этнический состав";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.deleteResultBox);
+            this.tabPage3.Controls.Add(this.label5);
+            this.tabPage3.Controls.Add(this.delLangTextBox);
+            this.tabPage3.Controls.Add(this.delLangButton);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(544, 317);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Удалить язык";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(544, 317);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Суммарная численность";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // radioHome
+            // 
+            this.radioHome.AutoSize = true;
+            this.radioHome.Location = new System.Drawing.Point(441, 8);
+            this.radioHome.Name = "radioHome";
+            this.radioHome.Size = new System.Drawing.Size(53, 17);
+            this.radioHome.TabIndex = 3;
+            this.radioHome.TabStop = true;
+            this.radioHome.Text = "Home";
+            this.radioHome.UseVisualStyleBackColor = true;
+            this.radioHome.CheckedChanged += new System.EventHandler(this.radioHome_CheckedChanged);
+            // 
+            // radioRsreu
+            // 
+            this.radioRsreu.AutoSize = true;
+            this.radioRsreu.Location = new System.Drawing.Point(500, 8);
+            this.radioRsreu.Name = "radioRsreu";
+            this.radioRsreu.Size = new System.Drawing.Size(60, 17);
+            this.radioRsreu.TabIndex = 4;
+            this.radioRsreu.TabStop = true;
+            this.radioRsreu.Text = "РГРТУ";
+            this.radioRsreu.UseVisualStyleBackColor = true;
+            this.radioRsreu.CheckedChanged += new System.EventHandler(this.radioRsreu_CheckedChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(100, 28);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(163, 20);
+            this.textBox1.TabIndex = 0;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(100, 54);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(163, 20);
+            this.textBox2.TabIndex = 1;
+            // 
+            // countryName
+            // 
+            this.countryName.AutoSize = true;
+            this.countryName.Location = new System.Drawing.Point(37, 31);
+            this.countryName.Name = "countryName";
+            this.countryName.Size = new System.Drawing.Size(43, 13);
+            this.countryName.TabIndex = 2;
+            this.countryName.Text = "Страна";
+            // 
+            // language
+            // 
+            this.language.AutoSize = true;
+            this.language.Location = new System.Drawing.Point(45, 57);
+            this.language.Name = "language";
+            this.language.Size = new System.Drawing.Size(35, 13);
+            this.language.TabIndex = 3;
+            this.language.Text = "Язык";
+            // 
+            // btnDeleteEthnical
+            // 
+            this.btnDeleteEthnical.Location = new System.Drawing.Point(188, 80);
+            this.btnDeleteEthnical.Name = "btnDeleteEthnical";
+            this.btnDeleteEthnical.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteEthnical.TabIndex = 4;
+            this.btnDeleteEthnical.Text = "Удалить";
+            this.btnDeleteEthnical.UseVisualStyleBackColor = true;
+            this.btnDeleteEthnical.Click += new System.EventHandler(this.btnDeleteEthnical_Click);
+            // 
+            // deleteEthnicalResult
+            // 
+            this.deleteEthnicalResult.Location = new System.Drawing.Point(4, 130);
+            this.deleteEthnicalResult.Name = "deleteEthnicalResult";
+            this.deleteEthnicalResult.ReadOnly = true;
+            this.deleteEthnicalResult.Size = new System.Drawing.Size(537, 20);
+            this.deleteEthnicalResult.TabIndex = 5;
+            // 
+            // delLangButton
+            // 
+            this.delLangButton.Location = new System.Drawing.Point(288, 43);
+            this.delLangButton.Name = "delLangButton";
+            this.delLangButton.Size = new System.Drawing.Size(75, 23);
+            this.delLangButton.TabIndex = 0;
+            this.delLangButton.Text = "Удалить";
+            this.delLangButton.UseVisualStyleBackColor = true;
+            this.delLangButton.Click += new System.EventHandler(this.delLangButton_Click);
+            // 
+            // delLangTextBox
+            // 
+            this.delLangTextBox.Location = new System.Drawing.Point(122, 45);
+            this.delLangTextBox.Name = "delLangTextBox";
+            this.delLangTextBox.Size = new System.Drawing.Size(160, 20);
+            this.delLangTextBox.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(59, 48);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Название";
+            // 
+            // deleteResultBox
+            // 
+            this.deleteResultBox.Location = new System.Drawing.Point(4, 109);
+            this.deleteResultBox.Name = "deleteResultBox";
+            this.deleteResultBox.ReadOnly = true;
+            this.deleteResultBox.Size = new System.Drawing.Size(537, 20);
+            this.deleteResultBox.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(576, 392);
+            this.Controls.Add(this.radioRsreu);
+            this.Controls.Add(this.radioHome);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.labelStatus);
             this.Controls.Add(this.btnConnect);
@@ -264,6 +398,10 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.countryAddResultDataGrid)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,6 +429,18 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView countryAddResultDataGrid;
+        private System.Windows.Forms.RadioButton radioHome;
+        private System.Windows.Forms.RadioButton radioRsreu;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label countryName;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label language;
+        private System.Windows.Forms.Button btnDeleteEthnical;
+        private System.Windows.Forms.TextBox deleteEthnicalResult;
+        private System.Windows.Forms.TextBox deleteResultBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox delLangTextBox;
+        private System.Windows.Forms.Button delLangButton;
     }
 }
 
