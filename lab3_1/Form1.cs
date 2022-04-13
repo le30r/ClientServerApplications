@@ -20,7 +20,7 @@ namespace lab3_1
                                      "User ID=sa;" +
                                      "Password=evmsql";
 
-        string connHome = "Data Source=DESKTOP-8ER83ML\\SQLEXPRESS;Initial Catalog=Языки народов мира;Integrated Security=True";
+        string connHome = "Data Source=DESKTOP-3SQA61C\\SQLEXPRESS;Initial Catalog=Языки народов мира;Integrated Security=True";
         SqlCommand reduceCmd;
         SqlCommand addNewCountryCmd;
         SqlCommand deleteEthicalCmd;
@@ -176,11 +176,12 @@ namespace lab3_1
             {
                 deleteLangCmd.Parameters.Clear();
                 deleteLangCmd.Parameters.AddWithValue("@name", nameTextBox.Text);
-                
+                var returnParameter = deleteLangCmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
+                returnParameter.Direction = ParameterDirection.ReturnValue;
 
-                int res = deleteLangCmd.ExecuteNonQuery();
+                deleteLangCmd.ExecuteNonQuery();
 
-                deleteResultBox.Text = "Удалено " + res + " записей";
+                deleteResultBox.Text = returnParameter.Value.ToString();
             }
             else
             {

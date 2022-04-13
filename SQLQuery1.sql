@@ -93,7 +93,7 @@ SELECT * FROM языки
 
 ExEC DeleteEthnical ' анада', '‘ранцузский'
 
-ALTER PROCEDURE DeleteLanguage (@name nchar(25))
+CREATE PROCEDURE DeleteLanguage (@name nchar(25))
 AS
 BEGIN
 DECLARE @lang_code int
@@ -114,3 +114,5 @@ END
 DECLARE @ret int 
 EXEC @ret = DeleteLanguage '–усский'
 PRINT @ret
+
+select * from языки
