@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnConnect = new System.Windows.Forms.Button();
             this.labelStatus = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -46,26 +47,43 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.deleteEthnicalResult = new System.Windows.Forms.TextBox();
+            this.btnDeleteEthnical = new System.Windows.Forms.Button();
+            this.language = new System.Windows.Forms.Label();
+            this.countryName = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.deleteResultBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.delLangTextBox = new System.Windows.Forms.TextBox();
+            this.delLangButton = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.sumCountResultBox = new System.Windows.Forms.TextBox();
+            this.countryNameBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.sumCountButton = new System.Windows.Forms.Button();
             this.radioHome = new System.Windows.Forms.RadioButton();
             this.radioRsreu = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.countryName = new System.Windows.Forms.Label();
-            this.language = new System.Windows.Forms.Label();
-            this.btnDeleteEthnical = new System.Windows.Forms.Button();
-            this.deleteEthnicalResult = new System.Windows.Forms.TextBox();
-            this.delLangButton = new System.Windows.Forms.Button();
-            this.delLangTextBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.deleteResultBox = new System.Windows.Forms.TextBox();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.sqlSelectCommand1 = new System.Data.SqlClient.SqlCommand();
+            this.sqlInsertCommand1 = new System.Data.SqlClient.SqlCommand();
+            this.sqlUpdateCommand1 = new System.Data.SqlClient.SqlCommand();
+            this.sqlDeleteCommand1 = new System.Data.SqlClient.SqlCommand();
+            this.sqlDataAdapter1 = new System.Data.SqlClient.SqlDataAdapter();
+            this.sqlConnection1 = new System.Data.SqlClient.SqlConnection();
+            this.dataSet11 = new lab3_1.DataSet1();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.countryAddResultDataGrid)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnConnect
@@ -94,6 +112,7 @@
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Location = new System.Drawing.Point(12, 37);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -250,6 +269,56 @@
             this.tabPage4.Text = "Удалить этнический состав";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // deleteEthnicalResult
+            // 
+            this.deleteEthnicalResult.Location = new System.Drawing.Point(4, 130);
+            this.deleteEthnicalResult.Name = "deleteEthnicalResult";
+            this.deleteEthnicalResult.ReadOnly = true;
+            this.deleteEthnicalResult.Size = new System.Drawing.Size(537, 20);
+            this.deleteEthnicalResult.TabIndex = 5;
+            // 
+            // btnDeleteEthnical
+            // 
+            this.btnDeleteEthnical.Location = new System.Drawing.Point(188, 80);
+            this.btnDeleteEthnical.Name = "btnDeleteEthnical";
+            this.btnDeleteEthnical.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteEthnical.TabIndex = 4;
+            this.btnDeleteEthnical.Text = "Удалить";
+            this.btnDeleteEthnical.UseVisualStyleBackColor = true;
+            this.btnDeleteEthnical.Click += new System.EventHandler(this.btnDeleteEthnical_Click);
+            // 
+            // language
+            // 
+            this.language.AutoSize = true;
+            this.language.Location = new System.Drawing.Point(45, 57);
+            this.language.Name = "language";
+            this.language.Size = new System.Drawing.Size(35, 13);
+            this.language.TabIndex = 3;
+            this.language.Text = "Язык";
+            // 
+            // countryName
+            // 
+            this.countryName.AutoSize = true;
+            this.countryName.Location = new System.Drawing.Point(37, 31);
+            this.countryName.Name = "countryName";
+            this.countryName.Size = new System.Drawing.Size(43, 13);
+            this.countryName.TabIndex = 2;
+            this.countryName.Text = "Страна";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(100, 54);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(163, 20);
+            this.textBox2.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(100, 28);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(163, 20);
+            this.textBox1.TabIndex = 0;
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.deleteResultBox);
@@ -263,14 +332,86 @@
             this.tabPage3.Text = "Удалить язык";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // deleteResultBox
+            // 
+            this.deleteResultBox.Location = new System.Drawing.Point(4, 109);
+            this.deleteResultBox.Name = "deleteResultBox";
+            this.deleteResultBox.ReadOnly = true;
+            this.deleteResultBox.Size = new System.Drawing.Size(537, 20);
+            this.deleteResultBox.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(59, 48);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Название";
+            // 
+            // delLangTextBox
+            // 
+            this.delLangTextBox.Location = new System.Drawing.Point(122, 45);
+            this.delLangTextBox.Name = "delLangTextBox";
+            this.delLangTextBox.Size = new System.Drawing.Size(160, 20);
+            this.delLangTextBox.TabIndex = 1;
+            // 
+            // delLangButton
+            // 
+            this.delLangButton.Location = new System.Drawing.Point(288, 43);
+            this.delLangButton.Name = "delLangButton";
+            this.delLangButton.Size = new System.Drawing.Size(75, 23);
+            this.delLangButton.TabIndex = 0;
+            this.delLangButton.Text = "Удалить";
+            this.delLangButton.UseVisualStyleBackColor = true;
+            this.delLangButton.Click += new System.EventHandler(this.delLangButton_Click);
+            // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.sumCountResultBox);
+            this.tabPage5.Controls.Add(this.countryNameBox);
+            this.tabPage5.Controls.Add(this.label6);
+            this.tabPage5.Controls.Add(this.sumCountButton);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(544, 317);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Суммарная численность";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // sumCountResultBox
+            // 
+            this.sumCountResultBox.Location = new System.Drawing.Point(4, 157);
+            this.sumCountResultBox.Name = "sumCountResultBox";
+            this.sumCountResultBox.ReadOnly = true;
+            this.sumCountResultBox.Size = new System.Drawing.Size(537, 20);
+            this.sumCountResultBox.TabIndex = 3;
+            // 
+            // countryNameBox
+            // 
+            this.countryNameBox.Location = new System.Drawing.Point(123, 87);
+            this.countryNameBox.Name = "countryNameBox";
+            this.countryNameBox.Size = new System.Drawing.Size(199, 20);
+            this.countryNameBox.TabIndex = 2;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(20, 90);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(97, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Название страны";
+            // 
+            // sumCountButton
+            // 
+            this.sumCountButton.Location = new System.Drawing.Point(328, 85);
+            this.sumCountButton.Name = "sumCountButton";
+            this.sumCountButton.Size = new System.Drawing.Size(158, 23);
+            this.sumCountButton.TabIndex = 0;
+            this.sumCountButton.Text = "Получить численность";
+            this.sumCountButton.UseVisualStyleBackColor = true;
+            this.sumCountButton.Click += new System.EventHandler(this.sumCountButton_Click);
             // 
             // radioHome
             // 
@@ -296,89 +437,90 @@
             this.radioRsreu.UseVisualStyleBackColor = true;
             this.radioRsreu.CheckedChanged += new System.EventHandler(this.radioRsreu_CheckedChanged);
             // 
-            // textBox1
+            // tabPage6
             // 
-            this.textBox1.Location = new System.Drawing.Point(100, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 20);
-            this.textBox1.TabIndex = 0;
+            this.tabPage6.Controls.Add(this.dataGridView1);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(544, 317);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Disconnect";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // sqlSelectCommand1
             // 
-            this.textBox2.Location = new System.Drawing.Point(100, 54);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(163, 20);
-            this.textBox2.TabIndex = 1;
+            this.sqlSelectCommand1.CommandText = "SELECT * FROM Языки";
+            this.sqlSelectCommand1.Connection = this.sqlConnection1;
             // 
-            // countryName
+            // sqlInsertCommand1
             // 
-            this.countryName.AutoSize = true;
-            this.countryName.Location = new System.Drawing.Point(37, 31);
-            this.countryName.Name = "countryName";
-            this.countryName.Size = new System.Drawing.Size(43, 13);
-            this.countryName.TabIndex = 2;
-            this.countryName.Text = "Страна";
+            this.sqlInsertCommand1.CommandText = resources.GetString("sqlInsertCommand1.CommandText");
+            this.sqlInsertCommand1.Connection = this.sqlConnection1;
+            this.sqlInsertCommand1.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@Код", System.Data.SqlDbType.Int, 0, "Код"),
+            new System.Data.SqlClient.SqlParameter("@Название", System.Data.SqlDbType.NChar, 0, "Название"),
+            new System.Data.SqlClient.SqlParameter("@Языковая_группа", System.Data.SqlDbType.NChar, 0, "Языковая группа"),
+            new System.Data.SqlClient.SqlParameter("@Вид_знаковой_системы", System.Data.SqlDbType.NChar, 0, "Вид знаковой системы")});
             // 
-            // language
+            // sqlUpdateCommand1
             // 
-            this.language.AutoSize = true;
-            this.language.Location = new System.Drawing.Point(45, 57);
-            this.language.Name = "language";
-            this.language.Size = new System.Drawing.Size(35, 13);
-            this.language.TabIndex = 3;
-            this.language.Text = "Язык";
+            this.sqlUpdateCommand1.CommandText = resources.GetString("sqlUpdateCommand1.CommandText");
+            this.sqlUpdateCommand1.Connection = this.sqlConnection1;
+            this.sqlUpdateCommand1.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@Код", System.Data.SqlDbType.Int, 0, "Код"),
+            new System.Data.SqlClient.SqlParameter("@Название", System.Data.SqlDbType.NChar, 0, "Название"),
+            new System.Data.SqlClient.SqlParameter("@Языковая_группа", System.Data.SqlDbType.NChar, 0, "Языковая группа"),
+            new System.Data.SqlClient.SqlParameter("@Вид_знаковой_системы", System.Data.SqlDbType.NChar, 0, "Вид знаковой системы"),
+            new System.Data.SqlClient.SqlParameter("@Original_Код", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Код", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_Название", System.Data.SqlDbType.NChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Название", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@IsNull_Языковая_группа", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Языковая группа", System.Data.DataRowVersion.Original, true, null, "", "", ""),
+            new System.Data.SqlClient.SqlParameter("@Original_Языковая_группа", System.Data.SqlDbType.NChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Языковая группа", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@IsNull_Вид_знаковой_системы", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Вид знаковой системы", System.Data.DataRowVersion.Original, true, null, "", "", ""),
+            new System.Data.SqlClient.SqlParameter("@Original_Вид_знаковой_системы", System.Data.SqlDbType.NChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Вид знаковой системы", System.Data.DataRowVersion.Original, null)});
             // 
-            // btnDeleteEthnical
+            // sqlDeleteCommand1
             // 
-            this.btnDeleteEthnical.Location = new System.Drawing.Point(188, 80);
-            this.btnDeleteEthnical.Name = "btnDeleteEthnical";
-            this.btnDeleteEthnical.Size = new System.Drawing.Size(75, 23);
-            this.btnDeleteEthnical.TabIndex = 4;
-            this.btnDeleteEthnical.Text = "Удалить";
-            this.btnDeleteEthnical.UseVisualStyleBackColor = true;
-            this.btnDeleteEthnical.Click += new System.EventHandler(this.btnDeleteEthnical_Click);
+            this.sqlDeleteCommand1.CommandText = resources.GetString("sqlDeleteCommand1.CommandText");
+            this.sqlDeleteCommand1.Connection = this.sqlConnection1;
+            this.sqlDeleteCommand1.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@Original_Код", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Код", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_Название", System.Data.SqlDbType.NChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Название", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@IsNull_Языковая_группа", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Языковая группа", System.Data.DataRowVersion.Original, true, null, "", "", ""),
+            new System.Data.SqlClient.SqlParameter("@Original_Языковая_группа", System.Data.SqlDbType.NChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Языковая группа", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@IsNull_Вид_знаковой_системы", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Вид знаковой системы", System.Data.DataRowVersion.Original, true, null, "", "", ""),
+            new System.Data.SqlClient.SqlParameter("@Original_Вид_знаковой_системы", System.Data.SqlDbType.NChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Вид знаковой системы", System.Data.DataRowVersion.Original, null)});
             // 
-            // deleteEthnicalResult
+            // sqlDataAdapter1
             // 
-            this.deleteEthnicalResult.Location = new System.Drawing.Point(4, 130);
-            this.deleteEthnicalResult.Name = "deleteEthnicalResult";
-            this.deleteEthnicalResult.ReadOnly = true;
-            this.deleteEthnicalResult.Size = new System.Drawing.Size(537, 20);
-            this.deleteEthnicalResult.TabIndex = 5;
+            this.sqlDataAdapter1.DeleteCommand = this.sqlDeleteCommand1;
+            this.sqlDataAdapter1.InsertCommand = this.sqlInsertCommand1;
+            this.sqlDataAdapter1.SelectCommand = this.sqlSelectCommand1;
+            this.sqlDataAdapter1.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
+            new System.Data.Common.DataTableMapping("Table", "Языки", new System.Data.Common.DataColumnMapping[] {
+                        new System.Data.Common.DataColumnMapping("Код", "Код"),
+                        new System.Data.Common.DataColumnMapping("Название", "Название"),
+                        new System.Data.Common.DataColumnMapping("Языковая группа", "Языковая группа"),
+                        new System.Data.Common.DataColumnMapping("Вид знаковой системы", "Вид знаковой системы")})});
+            this.sqlDataAdapter1.UpdateCommand = this.sqlUpdateCommand1;
             // 
-            // delLangButton
+            // sqlConnection1
             // 
-            this.delLangButton.Location = new System.Drawing.Point(288, 43);
-            this.delLangButton.Name = "delLangButton";
-            this.delLangButton.Size = new System.Drawing.Size(75, 23);
-            this.delLangButton.TabIndex = 0;
-            this.delLangButton.Text = "Удалить";
-            this.delLangButton.UseVisualStyleBackColor = true;
-            this.delLangButton.Click += new System.EventHandler(this.delLangButton_Click);
+            this.sqlConnection1.ConnectionString = "Data Source=ws210-p;Initial Catalog=\"Языки народов мира\";Persist Security Info=Tr" +
+    "ue;User ID=sa;Password=evmsql";
+            this.sqlConnection1.FireInfoMessageEventOnUserErrors = false;
             // 
-            // delLangTextBox
+            // dataSet11
             // 
-            this.delLangTextBox.Location = new System.Drawing.Point(122, 45);
-            this.delLangTextBox.Name = "delLangTextBox";
-            this.delLangTextBox.Size = new System.Drawing.Size(160, 20);
-            this.delLangTextBox.TabIndex = 1;
+            this.dataSet11.DataSetName = "DataSet1";
+            this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label5
+            // dataGridView1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(59, 48);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Название";
-            // 
-            // deleteResultBox
-            // 
-            this.deleteResultBox.Location = new System.Drawing.Point(4, 109);
-            this.deleteResultBox.Name = "deleteResultBox";
-            this.deleteResultBox.ReadOnly = true;
-            this.deleteResultBox.Size = new System.Drawing.Size(537, 20);
-            this.deleteResultBox.TabIndex = 3;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(538, 273);
+            this.dataGridView1.TabIndex = 0;
             // 
             // Form1
             // 
@@ -402,6 +544,11 @@
             this.tabPage4.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -441,6 +588,19 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox delLangTextBox;
         private System.Windows.Forms.Button delLangButton;
+        private System.Windows.Forms.TextBox sumCountResultBox;
+        private System.Windows.Forms.TextBox countryNameBox;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button sumCountButton;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Data.SqlClient.SqlCommand sqlSelectCommand1;
+        private System.Data.SqlClient.SqlConnection sqlConnection1;
+        private System.Data.SqlClient.SqlCommand sqlInsertCommand1;
+        private System.Data.SqlClient.SqlCommand sqlUpdateCommand1;
+        private System.Data.SqlClient.SqlCommand sqlDeleteCommand1;
+        private System.Data.SqlClient.SqlDataAdapter sqlDataAdapter1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private DataSet1 dataSet11;
     }
 }
 

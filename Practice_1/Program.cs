@@ -18,6 +18,8 @@ namespace Practice_1
             _945.AddStudent(student);
             _945.AddStudent(student_);
 
+            
+
             _945.GetInfo();
 
             Console.WriteLine("\n");

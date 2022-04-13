@@ -115,8 +115,9 @@ namespace Practice_1
             this.PhoneNumber = PhoneNumber;
         }
 
-        public bool Equals(Student student)
+        public override bool Equals(Object obj)
         {
+            var student = (Student)obj;
             return student.ID == ID &&
                 student.Name == Name &&
                 student.Surname == Surname &&

@@ -93,26 +93,55 @@ SELECT * FROM Языки
 
 ExEC DeleteEthnical 'Канада', 'Французский'
 
-CREATE PROCEDURE DeleteLanguage (@name nchar(25))
+ALTER PROCEDURE DeleteLanguage (@name nchar(25))
 AS
 BEGIN
-DECLARE @lang_code int
+DECLARE @lang_code int, @out int
+
 SELECT @lang_code = Код
 FROM Языки
 WHERE Название = @name
-IF EXISTS (SELECT * FROM ЭтническийСостав
-			WHERE Язык = @lang_code)
-RETURN 1
+
+IF @@ROWCOUNT = 0 
+SET @out = 2
 ELSE 
-	DELETE FROM Языки
-	WHERE Название = @name
-	IF @@ROWCOUNT != 0 RETURN 0
-	ELSE RETURN 2
+BEGIN
+	IF EXISTS (SELECT * FROM ЭтническийСостав
+				WHERE Язык = @lang_code)
+	SET @out = 1
+	ELSE
+		BEGIN
+			DELETE FROM Языки
+			WHERE Название = @name
+			SET @out = 0
+		END
+END
+RETURN @out
 END
 
 
-DECLARE @ret int 
-EXEC @ret = DeleteLanguage 'Русский'
+DECLARE @ret int
+EXEC @ret = DeleteLanguage 'узбекский'
 PRINT @ret
 
 select * from Языки
+
+SELECT * FROM ЭтническийСостав
+
+select Код
+FROM Языки
+WHERE Название = 'Русский'
+
+ALTER PROCEDURE GetSumCount @country nchar(25), @sum int OUTPUT
+AS
+BEGIN
+SET @sum = (SELECT SUM(Численность)
+FROM ЭтническийСостав LEFT JOIN Страны ON Страна = Код
+WHERE Название = @country AND Год = '2020')
+END
+
+EXEC GetSumCount 'Россия'
+
+SELECT SUM(Численность)
+FROM ЭтническийСостав LEFT JOIN Страны ON Страна = Код
+WHERE Название = 'Россия' AND Год = '2020'

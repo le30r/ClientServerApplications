@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data.Common;
 
 namespace lab3_1
 {
@@ -25,11 +26,14 @@ namespace lab3_1
         SqlCommand addNewCountryCmd;
         SqlCommand deleteEthicalCmd;
         SqlCommand deleteLangCmd;
+        SqlCommand getSumCountCmd;
 
         string NO_CONNECTION_ERROR = "Для выполнения запроса необходимо подключиться к базе данных";
         string NOT_FOUND_ERROR = "Запрос не вернул результатов";
         string ADD_ERROR = "При добавлении возникла ошибка";
         string ERROR = "Error";
+
+      
 
         public Form1()
         {
@@ -37,6 +41,10 @@ namespace lab3_1
             conn.ConnectionString = null;
             radioHome_CheckedChanged(this, new EventArgs());
             createNonQueries();
+
+            dataGridView1.RowUpdated += new SqlRowUpdatedEventHandler(OnRowUpdated);
+            dataGridView1.DataSource = dataSet11.Языки;
+            SelectCustomers();
 
         }
 
@@ -57,6 +65,11 @@ namespace lab3_1
             deleteLangCmd = conn.CreateCommand();
             deleteLangCmd.CommandType = CommandType.StoredProcedure;
             deleteLangCmd.CommandText = "DeleteLanguage";
+
+            getSumCountCmd = conn.CreateCommand();
+            getSumCountCmd.CommandType = CommandType.StoredProcedure;
+            getSumCountCmd.CommandText = "GetSumCount";
+
         }
 
         private void btnRun_Click(object sender, EventArgs e)
@@ -134,7 +147,7 @@ namespace lab3_1
             {
                 MessageBox.Show(this, NO_CONNECTION_ERROR, ERROR);
             }
-            
+
         }
 
         private void radioHome_CheckedChanged(object sender, EventArgs e)
@@ -160,7 +173,7 @@ namespace lab3_1
 
                 int res = deleteEthicalCmd.ExecuteNonQuery();
 
-                deleteEthnicalResult.Text = "Удалено " + res + " записей"; 
+                deleteEthnicalResult.Text = "Удалено " + res + " записей";
             }
             else
             {
@@ -175,13 +188,15 @@ namespace lab3_1
             if (conn.State == ConnectionState.Open)
             {
                 deleteLangCmd.Parameters.Clear();
-                deleteLangCmd.Parameters.AddWithValue("@name", nameTextBox.Text);
-                var returnParameter = deleteLangCmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
-                returnParameter.Direction = ParameterDirection.ReturnValue;
+                deleteLangCmd.Parameters.Add("@name", SqlDbType.NChar).Value = delLangTextBox.Text;
+                deleteLangCmd.Parameters.Add("@out", SqlDbType.Int);
+                deleteLangCmd.Parameters["@out"].Direction = ParameterDirection.ReturnValue;
+                
 
-                deleteLangCmd.ExecuteNonQuery();
+                SqlDataReader rdr = deleteLangCmd.ExecuteReader();
 
-                deleteResultBox.Text = returnParameter.Value.ToString();
+                deleteResultBox.Text = Convert.ToInt32(deleteLangCmd.Parameters["@out"].Value).ToString();
+                rdr.Close();
             }
             else
             {
@@ -189,5 +204,40 @@ namespace lab3_1
             }
 
         }
-    }
+
+        private void sumCountButton_Click(object sender, EventArgs e)
+        {
+            if (conn.State == ConnectionState.Open)
+            {
+                getSumCountCmd.Parameters.Clear();
+                getSumCountCmd.Parameters.AddWithValue("@country", countryNameBox.Text);
+
+                var returnParameter = getSumCountCmd.Parameters.Add("@sum", SqlDbType.Int);
+                returnParameter.Direction = ParameterDirection.Output;
+
+                getSumCountCmd.ExecuteNonQuery();
+
+                sumCountResultBox.Text = returnParameter.Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show(this, NO_CONNECTION_ERROR, ERROR);
+            }
+        }
+
+        private static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
+        {
+            if (args.Status == UpdateStatus.ErrorsOccurred)
+            {
+                MessageBox.Show(args.Errors.Message, "Ошибка",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                args.Status = UpdateStatus.SkipCurrentRow;
+            }
+        }
+
+        public void SelectCustomers()
+        {
+            dataSet11.Языки.Clear();
+            dataGridView1.Fill(dataSet11.Языки);
+        }
 }

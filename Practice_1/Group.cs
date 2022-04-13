@@ -46,14 +46,7 @@ namespace Practice_1
 
         public Student GetStudent(int id)
         {
-            foreach (Student student in Students)
-            {
-                if (student.ID == id)
-                {
-                    return student;
-                }
-            }
-            return null;
+            return Students.Where(x => x.ID == id).First();
         }
 
         
