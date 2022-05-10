@@ -16,12 +16,15 @@ namespace lab3_1
     {
 
         SqlConnection conn = new SqlConnection();
-        string connRSREU = "Data Source=ws210-p;" +
-                                     "Initial Catalog=Языки народов мира;" +
-                                     "User ID=sa;" +
-                                     "Password=evmsql";
 
-        string connHome = "Data Source=DESKTOP-3SQA61C\\SQLEXPRESS;Initial Catalog=Языки народов мира;Integrated Security=True";
+        string connRSREU = "Data Source=ws210-p;" +
+                           "Initial Catalog=Языки народов мира;" +
+                           "User ID=sa;" +
+                           "Password=evmsql";
+
+        string connHome =
+            "Data Source=DESKTOP-3SQA61C\\SQLEXPRESS;Initial Catalog=Языки народов мира;Integrated Security=True";
+
         SqlCommand reduceCmd;
         SqlCommand addNewCountryCmd;
         SqlCommand deleteEthicalCmd;
@@ -33,7 +36,7 @@ namespace lab3_1
         string ADD_ERROR = "При добавлении возникла ошибка";
         string ERROR = "Error";
 
-      
+
 
         public Form1()
         {
@@ -42,9 +45,8 @@ namespace lab3_1
             radioHome_CheckedChanged(this, new EventArgs());
             createNonQueries();
 
-            dataGridView1.RowUpdated += new SqlRowUpdatedEventHandler(OnRowUpdated);
-            dataGridView1.DataSource = dataSet11.Языки;
-            SelectCustomers();
+    
+     
 
         }
 
@@ -191,7 +193,7 @@ namespace lab3_1
                 deleteLangCmd.Parameters.Add("@name", SqlDbType.NChar).Value = delLangTextBox.Text;
                 deleteLangCmd.Parameters.Add("@out", SqlDbType.Int);
                 deleteLangCmd.Parameters["@out"].Direction = ParameterDirection.ReturnValue;
-                
+
 
                 SqlDataReader rdr = deleteLangCmd.ExecuteReader();
 
@@ -230,14 +232,11 @@ namespace lab3_1
             if (args.Status == UpdateStatus.ErrorsOccurred)
             {
                 MessageBox.Show(args.Errors.Message, "Ошибка",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 args.Status = UpdateStatus.SkipCurrentRow;
             }
         }
 
-        public void SelectCustomers()
-        {
-            dataSet11.Языки.Clear();
-            dataGridView1.Fill(dataSet11.Языки);
-        }
+
+    }
 }

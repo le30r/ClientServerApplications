@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnConnect = new System.Windows.Forms.Button();
             this.labelStatus = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -65,15 +64,6 @@
             this.sumCountButton = new System.Windows.Forms.Button();
             this.radioHome = new System.Windows.Forms.RadioButton();
             this.radioRsreu = new System.Windows.Forms.RadioButton();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.sqlSelectCommand1 = new System.Data.SqlClient.SqlCommand();
-            this.sqlInsertCommand1 = new System.Data.SqlClient.SqlCommand();
-            this.sqlUpdateCommand1 = new System.Data.SqlClient.SqlCommand();
-            this.sqlDeleteCommand1 = new System.Data.SqlClient.SqlCommand();
-            this.sqlDataAdapter1 = new System.Data.SqlClient.SqlDataAdapter();
-            this.sqlConnection1 = new System.Data.SqlClient.SqlConnection();
-            this.dataSet11 = new lab3_1.DataSet1();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -81,9 +71,6 @@
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnConnect
@@ -112,7 +99,6 @@
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Location = new System.Drawing.Point(12, 37);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -437,91 +423,6 @@
             this.radioRsreu.UseVisualStyleBackColor = true;
             this.radioRsreu.CheckedChanged += new System.EventHandler(this.radioRsreu_CheckedChanged);
             // 
-            // tabPage6
-            // 
-            this.tabPage6.Controls.Add(this.dataGridView1);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(544, 317);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Disconnect";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // sqlSelectCommand1
-            // 
-            this.sqlSelectCommand1.CommandText = "SELECT * FROM Языки";
-            this.sqlSelectCommand1.Connection = this.sqlConnection1;
-            // 
-            // sqlInsertCommand1
-            // 
-            this.sqlInsertCommand1.CommandText = resources.GetString("sqlInsertCommand1.CommandText");
-            this.sqlInsertCommand1.Connection = this.sqlConnection1;
-            this.sqlInsertCommand1.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
-            new System.Data.SqlClient.SqlParameter("@Код", System.Data.SqlDbType.Int, 0, "Код"),
-            new System.Data.SqlClient.SqlParameter("@Название", System.Data.SqlDbType.NChar, 0, "Название"),
-            new System.Data.SqlClient.SqlParameter("@Языковая_группа", System.Data.SqlDbType.NChar, 0, "Языковая группа"),
-            new System.Data.SqlClient.SqlParameter("@Вид_знаковой_системы", System.Data.SqlDbType.NChar, 0, "Вид знаковой системы")});
-            // 
-            // sqlUpdateCommand1
-            // 
-            this.sqlUpdateCommand1.CommandText = resources.GetString("sqlUpdateCommand1.CommandText");
-            this.sqlUpdateCommand1.Connection = this.sqlConnection1;
-            this.sqlUpdateCommand1.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
-            new System.Data.SqlClient.SqlParameter("@Код", System.Data.SqlDbType.Int, 0, "Код"),
-            new System.Data.SqlClient.SqlParameter("@Название", System.Data.SqlDbType.NChar, 0, "Название"),
-            new System.Data.SqlClient.SqlParameter("@Языковая_группа", System.Data.SqlDbType.NChar, 0, "Языковая группа"),
-            new System.Data.SqlClient.SqlParameter("@Вид_знаковой_системы", System.Data.SqlDbType.NChar, 0, "Вид знаковой системы"),
-            new System.Data.SqlClient.SqlParameter("@Original_Код", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Код", System.Data.DataRowVersion.Original, null),
-            new System.Data.SqlClient.SqlParameter("@Original_Название", System.Data.SqlDbType.NChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Название", System.Data.DataRowVersion.Original, null),
-            new System.Data.SqlClient.SqlParameter("@IsNull_Языковая_группа", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Языковая группа", System.Data.DataRowVersion.Original, true, null, "", "", ""),
-            new System.Data.SqlClient.SqlParameter("@Original_Языковая_группа", System.Data.SqlDbType.NChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Языковая группа", System.Data.DataRowVersion.Original, null),
-            new System.Data.SqlClient.SqlParameter("@IsNull_Вид_знаковой_системы", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Вид знаковой системы", System.Data.DataRowVersion.Original, true, null, "", "", ""),
-            new System.Data.SqlClient.SqlParameter("@Original_Вид_знаковой_системы", System.Data.SqlDbType.NChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Вид знаковой системы", System.Data.DataRowVersion.Original, null)});
-            // 
-            // sqlDeleteCommand1
-            // 
-            this.sqlDeleteCommand1.CommandText = resources.GetString("sqlDeleteCommand1.CommandText");
-            this.sqlDeleteCommand1.Connection = this.sqlConnection1;
-            this.sqlDeleteCommand1.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
-            new System.Data.SqlClient.SqlParameter("@Original_Код", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Код", System.Data.DataRowVersion.Original, null),
-            new System.Data.SqlClient.SqlParameter("@Original_Название", System.Data.SqlDbType.NChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Название", System.Data.DataRowVersion.Original, null),
-            new System.Data.SqlClient.SqlParameter("@IsNull_Языковая_группа", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Языковая группа", System.Data.DataRowVersion.Original, true, null, "", "", ""),
-            new System.Data.SqlClient.SqlParameter("@Original_Языковая_группа", System.Data.SqlDbType.NChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Языковая группа", System.Data.DataRowVersion.Original, null),
-            new System.Data.SqlClient.SqlParameter("@IsNull_Вид_знаковой_системы", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Вид знаковой системы", System.Data.DataRowVersion.Original, true, null, "", "", ""),
-            new System.Data.SqlClient.SqlParameter("@Original_Вид_знаковой_системы", System.Data.SqlDbType.NChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Вид знаковой системы", System.Data.DataRowVersion.Original, null)});
-            // 
-            // sqlDataAdapter1
-            // 
-            this.sqlDataAdapter1.DeleteCommand = this.sqlDeleteCommand1;
-            this.sqlDataAdapter1.InsertCommand = this.sqlInsertCommand1;
-            this.sqlDataAdapter1.SelectCommand = this.sqlSelectCommand1;
-            this.sqlDataAdapter1.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
-            new System.Data.Common.DataTableMapping("Table", "Языки", new System.Data.Common.DataColumnMapping[] {
-                        new System.Data.Common.DataColumnMapping("Код", "Код"),
-                        new System.Data.Common.DataColumnMapping("Название", "Название"),
-                        new System.Data.Common.DataColumnMapping("Языковая группа", "Языковая группа"),
-                        new System.Data.Common.DataColumnMapping("Вид знаковой системы", "Вид знаковой системы")})});
-            this.sqlDataAdapter1.UpdateCommand = this.sqlUpdateCommand1;
-            // 
-            // sqlConnection1
-            // 
-            this.sqlConnection1.ConnectionString = "Data Source=ws210-p;Initial Catalog=\"Языки народов мира\";Persist Security Info=Tr" +
-    "ue;User ID=sa;Password=evmsql";
-            this.sqlConnection1.FireInfoMessageEventOnUserErrors = false;
-            // 
-            // dataSet11
-            // 
-            this.dataSet11.DataSetName = "DataSet1";
-            this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(538, 273);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -546,9 +447,6 @@
             this.tabPage3.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            this.tabPage6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -592,15 +490,6 @@
         private System.Windows.Forms.TextBox countryNameBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button sumCountButton;
-        private System.Windows.Forms.TabPage tabPage6;
-        private System.Data.SqlClient.SqlCommand sqlSelectCommand1;
-        private System.Data.SqlClient.SqlConnection sqlConnection1;
-        private System.Data.SqlClient.SqlCommand sqlInsertCommand1;
-        private System.Data.SqlClient.SqlCommand sqlUpdateCommand1;
-        private System.Data.SqlClient.SqlCommand sqlDeleteCommand1;
-        private System.Data.SqlClient.SqlDataAdapter sqlDataAdapter1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private DataSet1 dataSet11;
     }
 }
 
